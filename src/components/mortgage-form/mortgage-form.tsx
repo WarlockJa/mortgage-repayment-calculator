@@ -69,7 +69,10 @@ export default function MortgageForm() {
           <h1 className="text-2xl font-bold">Mortgage Calculator</h1>
           <Button
             variant={"link"}
-            onClick={() => reset()}
+            onClick={() => {
+              reset();
+              form.clearErrors();
+            }}
             className="text-md text-custom-slate-500 hover:text-foreground cursor-pointer p-0 underline"
           >
             Clear All
@@ -87,7 +90,11 @@ export default function MortgageForm() {
                     Mortgage Amount
                   </FormLabel>
                   <FormControl>
-                    <div className="aria-[invalid=true]:[&_input]:border-custom-red aria-[invalid=true]:[&_div]:bg-custom-red aria-[invalid=true]:[&_div]:text-background relative">
+                    <div
+                      className={
+                        "aria-[invalid=true]:[&_input]:border-custom-red aria-[invalid=true]:[&_div]:bg-custom-red aria-[invalid=true]:[&_div]:text-background relative"
+                      }
+                    >
                       <input
                         {...field}
                         onFocus={() => setIsCurrencyInputFocused(true)}
