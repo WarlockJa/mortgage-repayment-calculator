@@ -24,7 +24,7 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   /* --color-border: var(--border); */
-  --color-border: var(--color-custom-slate-900);
+  --color-border: var(--color-custom-slate-500);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
